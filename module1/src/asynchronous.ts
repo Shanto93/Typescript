@@ -22,4 +22,21 @@
   };
 
   showData();
+
+  type TTodo = {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean;
+  };
+
+  const getTodo = async (): Promise<TTodo> => {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/1"
+    );
+    const data = await response.json();
+    return data;
+  };
+
+  getTodo();
 }
