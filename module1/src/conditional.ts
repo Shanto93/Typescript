@@ -1,5 +1,5 @@
 {
-  //Conditional type: Types that depend on other types
+  //Conditional type: Retuen a type based on condion of another type
 
   type Sheikh = {
     car: string;
