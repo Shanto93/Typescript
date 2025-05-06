@@ -18,7 +18,7 @@
 
   class StudentAccunt extends BankAccount {
     test() {
-      this.name = "test";
+      this.name = "test";  
     }
   }
 
