@@ -11,18 +11,30 @@
       this._balance = _balance;
     }
 
-    addDeposite(amount: number) {
+    // addDeposite(amount: number) {
+    //   this._balance = this._balance + amount;
+    // }
+
+    get balance(): number {
+      return this._balance;
+    }
+
+    set deposite(amount: number) {
       this._balance = this._balance + amount;
     }
   }
 
   class StudentAccunt extends BankAccount {
     test() {
-      this.name = "test";  
+      this.name = "test";
     }
   }
 
   const myAccount = new BankAccount(100, "Shanta Islam", 10000);
   const student1 = new StudentAccunt(101, "student1", 2000);
-  myAccount.addDeposite(500);
+  //   myAccount.addDeposite(500);
+  myAccount.deposite = 500;
+  myAccount.balance;
+
+  console.log(myAccount);
 }
